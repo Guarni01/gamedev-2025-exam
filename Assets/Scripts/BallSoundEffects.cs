@@ -20,7 +20,7 @@ public class BallSoundEffects : MonoBehaviour
         {            
             audioSource.PlayOneShot(hitPlayerSfx);
         }
-        else if (collision.collider.CompareTag("Destructible"))
+        else if (collision.collider.CompareTag("Destructible")|| (collision.collider.CompareTag("Purple")))
         {            
             audioSource.PlayOneShot(hitBrickSfx);
         }

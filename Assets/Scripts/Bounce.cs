@@ -36,7 +36,7 @@ public class Bounce : MonoBehaviour
             // Earn a few points
             Score(10, collision.contacts[0].point);
         }
-        else if (collision.collider.CompareTag("Destructible"))
+        else if (collision.collider.CompareTag("Destructible") || (collision.collider.CompareTag("Purple")))
         {
             // Give impulse (extra bounce due to hit) in direction of bounce at bouncing
             body.AddForce(bounceDirection * speedChangeAtHit, ForceMode.VelocityChange);
@@ -56,10 +56,15 @@ public class Bounce : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.collider.CompareTag("Destructible"))
+        if (collision.collider.CompareTag("Destructible")|| (collision.collider.CompareTag("Purple")))
         {
             // Destroy the destructible object AFTER bouncing
             Destroy(collision.collider.gameObject, 0.1f);
+        }
+        if (collision.collider.CompareTag("Purple")
+            {
+            // Spawn a new row of bricks after bouncing on a purple brick
+            FindObjectOfType<BrickSpawner>().Start();
         }
     }
 
