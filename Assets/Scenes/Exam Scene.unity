@@ -719,6 +719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c9bde0c1f1e8f4eb7f633d5293b645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRotated: 0
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -6622,7 +6623,7 @@ Transform:
   m_GameObject: {fileID: 1941886146}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.16, y: 3.69, z: 0}
+  m_LocalPosition: {x: -11.71, y: 3.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6649,6 +6650,7 @@ MonoBehaviour:
   rowCount: 7
   columnCount: 8
   brickSpawn: {x: -7, y: 5}
+  purple: {fileID: 7197962471790913118, guid: f33083341cbce3c44acabb432b9a1d82, type: 3}
 --- !u!1001 &2069788870
 PrefabInstance:
   m_ObjectHideFlags: 0
